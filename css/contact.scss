@@ -1,0 +1,156 @@
+@import "./variables";
+
+section#contact {
+  background-color: $colorWhite;
+  color: $colorBlack;
+  .sectionWrapper {
+    padding: 4rem 10px;
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: end;
+    grid-gap: 30px;
+
+    .contactHeadline {
+      grid-column: 1/-1;
+      width: clamp(300px, 60vw, 550px);
+      justify-self: end;
+      .headline {
+        font-weight: 700;
+        font-size: 3rem;
+        text-align: right;
+      }
+      .subHeadline {
+        text-align: right;
+      }
+    }
+
+    .contactInformation {
+      .title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .infoItem {
+        margin-bottom: 1rem;
+
+        p {
+          color: $colorGray700;
+        }
+        p.type {
+          font-weight: 700;
+          color: $colorBlack;
+        }
+      }
+    }
+
+    form {
+      width: clamp(300px, 60vw, 550px);
+
+      .formItem {
+        width: 100%;
+        margin-bottom: 16px;
+        label {
+          width: 100%;
+          margin-bottom: 6px;
+          font-weight: 600;
+          display: block;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 10px;
+          background-color: $colorWhite;
+          box-shadow: 0 0px 2px $colorGray300;
+        }
+        input {
+          height: 40px;
+        }
+
+        textarea {
+          height: 100px;
+        }
+      }
+
+      .submitMessage {
+        margin-bottom: 10px;
+
+        .errors {
+          font-size: 0.85rem;
+          color: red;
+        }
+        .success {
+          font-size: 0.85rem;
+          color: $colorBlack;
+        }
+      }
+
+      button[type="submit"] {
+        background-color: $colorBlack;
+        color: $colorPrimary;
+        padding: 10px 40px;
+        outline: none;
+        cursor: pointer;
+        border: 3px solid $colorBlack;
+        &:hover {
+          background-color: $colorPrimary;
+          color: $colorBlack;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#contact {
+    .sectionWrapper {
+      grid-template-columns: 1fr;
+      justify-items: start;
+      .contactHeadline {
+        justify-self: start;
+
+        .headline {
+          text-align: left;
+        }
+        .subHeadline {
+          text-align: left;
+        }
+      }
+
+      .contactInformation {
+        .title {
+        }
+        .infoItem {
+          p {
+          }
+          p.type {
+          }
+        }
+      }
+
+      form {
+        .formItem {
+          label {
+          }
+          input,
+          textarea {
+          }
+          input {
+          }
+
+          textarea {
+          }
+        }
+
+        button[type="submit"] {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+}

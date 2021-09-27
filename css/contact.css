@@ -1,0 +1,135 @@
+section#contact {
+  background-color: #ffffff;
+  color: #000;
+}
+
+section#contact .sectionWrapper {
+  padding: 4rem 10px;
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  justify-items: end;
+  grid-gap: 30px;
+}
+
+section#contact .sectionWrapper .contactHeadline {
+  grid-column: 1/-1;
+  width: clamp(300px, 60vw, 550px);
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+section#contact .sectionWrapper .contactHeadline .headline {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: right;
+}
+
+section#contact .sectionWrapper .contactHeadline .subHeadline {
+  text-align: right;
+}
+
+section#contact .sectionWrapper .contactInformation .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section#contact .sectionWrapper .contactInformation .infoItem {
+  margin-bottom: 1rem;
+}
+
+section#contact .sectionWrapper .contactInformation .infoItem p {
+  color: #595959;
+}
+
+section#contact .sectionWrapper .contactInformation .infoItem p.type {
+  font-weight: 700;
+  color: #000;
+}
+
+section#contact .sectionWrapper form {
+  width: clamp(300px, 60vw, 550px);
+}
+
+section#contact .sectionWrapper form .formItem {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+section#contact .sectionWrapper form .formItem label {
+  width: 100%;
+  margin-bottom: 6px;
+  font-weight: 600;
+  display: block;
+}
+
+section#contact .sectionWrapper form .formItem input,
+section#contact .sectionWrapper form .formItem textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0px 2px #bfbfbf;
+          box-shadow: 0 0px 2px #bfbfbf;
+}
+
+section#contact .sectionWrapper form .formItem input {
+  height: 40px;
+}
+
+section#contact .sectionWrapper form .formItem textarea {
+  height: 100px;
+}
+
+section#contact .sectionWrapper form .submitMessage {
+  margin-bottom: 10px;
+}
+
+section#contact .sectionWrapper form .submitMessage .errors {
+  font-size: 0.85rem;
+  color: red;
+}
+
+section#contact .sectionWrapper form .submitMessage .success {
+  font-size: 0.85rem;
+  color: #000;
+}
+
+section#contact .sectionWrapper form button[type="submit"] {
+  background-color: #000;
+  color: #dbbf43;
+  padding: 10px 40px;
+  outline: none;
+  cursor: pointer;
+  border: 3px solid #000;
+}
+
+section#contact .sectionWrapper form button[type="submit"]:hover {
+  background-color: #dbbf43;
+  color: #000;
+}
+
+@media screen and (max-width: 700px) {
+  section#contact .sectionWrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  section#contact .sectionWrapper .contactHeadline {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  section#contact .sectionWrapper .contactHeadline .headline {
+    text-align: left;
+  }
+  section#contact .sectionWrapper .contactHeadline .subHeadline {
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

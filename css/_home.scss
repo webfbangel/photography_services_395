@@ -1,0 +1,394 @@
+@import "_variables";
+
+section#home {
+  width: 100%;
+  height: clamp(300px, 100vh, 670px);
+  position: relative;
+  > * {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .sectionWrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 15vh 30px;
+    z-index: 2;
+    background-color: transparent;
+    .headline {
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 3.5rem;
+      color: $colorWhite;
+      max-width: 400px;
+      margin: clamp();
+      margin-bottom: clamp(30px, 10vh, 60px);
+    }
+
+    .subHeadline {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: $colorWhite;
+      max-width: 500px;
+      line-height: 1.3rem;
+      margin-bottom: clamp(10px, 5vh, 30px);
+    }
+
+    button {
+      border: none;
+      display: block;
+      border-radius: 0.4rem;
+      background-color: $colorPrimary;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 0 4px $colorPrimary;
+      a {
+        display: block;
+        color: $colorBlack;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .slider {
+    width: 100%;
+    height: clamp(300px, 100vh, 670px);
+    position: absolute;
+
+    .slide {
+      width: 100%;
+      height: clamp(300px, 100vh, 670px);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      &.slideOne {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_wysABU_dGyN_omCPqIHFVpt2DV-aIYk2Q&usqp=CAU");
+      }
+      &.slideTwo {
+        background-image: url("https://www.photographiede.com/wp-content/uploads/2019/03/Photography-Service-For-All-Commercial-Events.jpg");
+      }
+      &.slideThree {
+        background-image: url("https://lh3.googleusercontent.com/proxy/_dtroaOveqUvfoGRY45srecAbDVmvo31SxuvpBgIgaIdNDkvX0rU_aeTpA5ZPIq4va950G51Ik57BSohkF31");
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#home {
+    width: 100%;
+    height: clamp(300px, 100vh, 670px);
+    position: relative;
+    > * {
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .sectionWrapper {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+      padding: 15vh 30px;
+      z-index: 2;
+      background-color: transparent;
+      .headline {
+        font-size: 3rem;
+      }
+
+      .subHeadline {
+        font-size: 1rem;
+      }
+
+      button {
+        border: none;
+        display: block;
+        border-radius: 0.4rem;
+        background-color: $colorPrimary;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 0 4px $colorPrimary;
+        a {
+          display: block;
+          color: $colorBlack;
+          padding: 0.8rem 1rem;
+          text-decoration: none;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+section#services {
+  .sectionWrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 15vh 30px;
+    .title {
+      font-family: $fontDancing;
+      font-weight: 700;
+      font-size: 4rem;
+      color: $colorPrimary;
+      margin-bottom: clamp(20px, 10vw, 50px);
+    }
+    .servicesWrapper {
+      display: grid;
+      gap: 6rem 0;
+      .service {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        justify-content: start;
+
+        &.left {
+          .image {
+            grid-column: 5/-1;
+          }
+
+          .information {
+            grid-column: 1/6;
+          }
+        }
+
+        .image {
+          grid-column: 1/8;
+          grid-row: 1/-1;
+
+          background-size: cover;
+          background-position: top center;
+
+          &.imageOne {
+            background-image: url("https://sherijoweddingpro.com/wp-content/uploads/2020/07/Wedding-groom-bride-750x500.jpeg");
+          }
+          &.imageTwo {
+            background-image: url("https://trebonstudio.co.uk/wp-content/uploads/2021/04/trebon-makeover-studio-leicester-16-1024x681.jpg");
+          }
+          &.imageThree {
+            background-image: url("https://thumbs.dreamstime.com/b/happy-black-family-little-son-sitting-floor-together-young-concept-parents-smiling-posing-to-camera-over-white-brick-161554189.jpg");
+          }
+        }
+        .information {
+          grid-column: 6/-1;
+          grid-row: 3/-3;
+          min-height: 200px;
+          background: $colorWhite;
+          padding: 50px;
+          .name {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+          .description {
+            font-weight: 300;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#services {
+    .sectionWrapper {
+      .servicesWrapper {
+        .service,
+        .service.left {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr;
+          .image {
+            grid-column: 1/-1;
+            grid-row: 2/-1;
+          }
+          .information {
+            grid-column: 1/-1;
+            grid-row: 1/-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+section#testimonies {
+  .sectionWrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    padding: 15vh 30px;
+
+    .title {
+      font-family: $fontDancing;
+      font-weight: 700;
+      font-size: 4rem;
+      color: $colorPrimary;
+      margin-bottom: clamp(20px, 10vw, 50px);
+    }
+    .testimoniesWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      .testimony {
+        background-color: $colorGray100;
+        padding: 1.2rem;
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+        border-radius: 0.5rem;
+        position: relative;
+        .icon {
+          position: absolute;
+          font-size: 2rem;
+          color: $colorBlue;
+          top: -1rem;
+          left: -1rem;
+        }
+        .message {
+          font-weight: 300;
+          color: $colorBlack;
+          font-size: 1.2rem;
+        }
+        .name {
+          font-weight: 700;
+          color: $colorBlue;
+          padding: 10px 0;
+          text-align: right;
+        }
+        .date {
+          text-align: right;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section#testimonies {
+    .sectionWrapper {
+      .title {
+      }
+      .testimoniesWrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        .testimony {
+          .icon {
+          }
+          .message {
+          }
+          .name {
+          }
+          .date {
+          }
+        }
+      }
+    }
+  }
+}
+
+section#contact {
+  background-color: $colorBlue;
+  color: $colorWhite;
+  .sectionWrapper {
+    padding: 4rem 10px;
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: end;
+    grid-gap: 30px;
+
+    .contactHeadline {
+      width: clamp(300px, 60vw, 550px);
+      justify-self: end;
+      .headline {
+        font-weight: 700;
+        font-size: 3rem;
+        text-align: right;
+      }
+      .subHeadline {
+        text-align: right;
+      }
+    }
+
+    form {
+      width: clamp(300px, 60vw, 550px);
+
+      .formItem {
+        width: 100%;
+        margin-bottom: 16px;
+        label {
+          width: 100%;
+          margin-bottom: 6px;
+          font-weight: 600;
+          display: block;
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 10px;
+          background-color: $colorWhite;
+          box-shadow: 0 0px 2px $colorGray300;
+        }
+        input {
+          height: 40px;
+        }
+
+        textarea {
+          height: 100px;
+        }
+      }
+
+      .submitMessage {
+        margin-bottom: 10px;
+        .errors {
+          font-size: 0.85rem;
+          color: pink;
+        }
+        .success {
+          font-size: 0.85rem;
+          color: $colorWhite;
+        }
+      }
+
+      button[type="submit"] {
+        background-color: $colorBlack;
+        color: $colorPrimary;
+        padding: 10px 40px;
+        outline: none;
+        cursor: pointer;
+        border: 3px solid $colorBlack;
+        &:hover {
+          background-color: $colorPrimary;
+          color: $colorBlack;
+        }
+      }
+    }
+  }
+}

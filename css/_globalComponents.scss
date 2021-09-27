@@ -1,0 +1,214 @@
+nav.navbar {
+  width: calc(100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+  position: relative;
+  background-color: white;
+  .sectionWrapper {
+    display: grid;
+    z-index: 10;
+    grid-template-columns: 1fr;
+    padding: 20px 30px;
+    max-width: 1100px;
+    margin: auto;
+
+    .hamburgerMenu {
+      display: none;
+      cursor: pointer;
+    }
+    .logo {
+      margin-bottom: 1rem;
+      p.big {
+        font-size: 4rem;
+        font-weight: 700;
+        font-family: $fontDancing;
+        text-align: center;
+        color: $colorPrimary;
+      }
+
+      p.small {
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: $fontJosefin;
+        text-align: center;
+        color: $colorGray700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+
+    .navbarItems {
+      display: grid;
+      grid-auto-columns: auto;
+      grid-auto-flow: column;
+      justify-items: center;
+      justify-content: center;
+      .navbarItem {
+        padding: 10px 20px;
+
+        &:not(:last-of-type) {
+          margin-left: 5px;
+        }
+        .navbarLink {
+          text-decoration: none;
+          color: $colorBlack;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav.navbar {
+    background-color: white;
+    // position: absolute;
+    z-index: 100;
+
+    .sectionWrapper {
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+
+      .hamburgerMenu {
+        display: block;
+        i.menuClose {
+          display: none;
+        }
+      }
+
+      .logo {
+        justify-self: start;
+        p.big {
+          font-size: 2rem;
+        }
+
+        p.small {
+          font-size: 0.9rem;
+          letter-spacing: 0;
+        }
+      }
+
+      .navbarItems {
+        grid-column: 1/-1;
+        grid-auto-rows: auto;
+        grid-auto-flow: row;
+        display: none;
+        .navbarItem {
+          &:not(:last-of-type) {
+          }
+          .navbarLink {
+          }
+        }
+      }
+    }
+
+    &.open {
+      height: 100vh;
+      .sectionWrapper {
+        height: 100%;
+
+        .hamburgerMenu {
+          i.menuOpen {
+            display: none;
+          }
+
+          i.menuClose {
+            display: block;
+          }
+        }
+        .navbarItems {
+          display: grid;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $colorBlack;
+  color: $colorGray300;
+  .sectionWrapper {
+    padding: 4rem clamp(10px, 10vw, 60px);
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "pages contact"
+      "extra extra"
+      "social social";
+    grid-gap: 30px;
+
+    p.title {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      grid-column: 1/-1;
+      color: $colorWhite;
+    }
+
+    a {
+      color: $colorGray300;
+
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+
+    .pages {
+      grid-area: pages;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0 10px;
+      align-content: start;
+
+      .contentPages {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px 0px;
+        align-content: start;
+      }
+    }
+
+    .extraPages {
+      grid-area: extra;
+      display: grid;
+      grid-auto-rows: auto;
+      grid-auto-flow: column;
+      grid-gap: clamp(20px, 20vw, 40px);
+
+      justify-content: center;
+      align-content: start;
+    }
+
+    .socialMedia {
+      grid-area: social;
+      display: grid;
+      grid-auto-rows: auto;
+      grid-auto-flow: column;
+      grid-gap: clamp(15px, 20vw, 25px);
+      justify-content: center;
+      align-content: start;
+      a {
+        display: block;
+        justify-self: start;
+        margin-bottom: 10px;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .contactInformation {
+      grid-area: contact;
+      justify-self: end;
+      .infoItem {
+        margin-bottom: 20px;
+        .type {
+          font-weight: 600;
+          color: $colorWhite;
+        }
+      }
+    }
+  }
+}
