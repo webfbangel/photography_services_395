@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photography services</title>
 
-    <!--Fontawesome -->
-    <script src="https://kit.fontawesome.com/86a91fcfba.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography services</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/privacy_policy.css" />
-  </head>
-  <body>
-    <!-- Navbar section start -->
-    <nav class="navbar">
-      <div class="sectionWrapper">
-        <div class="logo">
-          <p class="big">Spotting the Light</p>
-          <p class="small">Photography services</p>
+  <!--Fontawesome -->
+  <script src="https://kit.fontawesome.com/86a91fcfba.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/privacy_policy.css" />
+</head>
+
+<body>
+  <!-- Navbar section start -->
+  <nav class="navbar">
+    <div class="sectionWrapper">
+      <div class="logo">
+        <p class="big">Spotting the Light</p>
+        <p class="small">Photography services</p>
+      </div>
+      <div class="hamburgerMenu" onclick="handleHamburgerMenu()">
+        <i class="fas fa-bars menuOpen"></i>
+        <i class="fas fa-times menuClose"></i>
+      </div>
+      <div class="navbarItems">
+        <div class="navbarItem" onclick="handleHamburgerMenu()">
+          <a href="./#home" class="navbarLink">Home</a>
         </div>
-        <div class="hamburgerMenu" onclick="handleHamburgerMenu()">
-          <i class="fas fa-bars menuOpen"></i>
-          <i class="fas fa-times menuClose"></i>
+        <div class="navbarItem" onclick="handleHamburgerMenu()">
+          <a href="./#services" class="navbarLink">Our Services</a>
         </div>
-        <div class="navbarItems">
-          <div class="navbarItem" onclick="handleHamburgerMenu()">
-            <a href="/#home" class="navbarLink">Home</a>
-          </div>
-          <div class="navbarItem" onclick="handleHamburgerMenu()">
-            <a href="/#services" class="navbarLink">Our Services</a>
-          </div>
-          <div class="navbarItem" onclick="handleHamburgerMenu()">
-            <a href="/#testimonies" class="navbarLink">Testimonies</a>
-          </div>
-          <div class="navbarItem" onclick="handleHamburgerMenu()">
-            <a href="/contact.html" class="navbarLink">Contact</a>
-          </div>
+        <div class="navbarItem" onclick="handleHamburgerMenu()">
+          <a href="./#testimonies" class="navbarLink">Testimonies</a>
+        </div>
+        <div class="navbarItem" onclick="handleHamburgerMenu()">
+          <a href="./contact.php" class="navbarLink">Contact</a>
         </div>
       </div>
-    </nav>
-    <!-- Navbar section end -->
+    </div>
+  </nav>
+  <!-- Navbar section end -->
 
-    <section id="privacyPolicy">
-      <div class="sectionWrapper">
-        <h1 class="title">Privacy Policy</h2>
+  <section id="privacyPolicy">
+    <div class="sectionWrapper">
+      <h1 class="title">Privacy Policy</h2>
         <p>Last updated: September 24, 2021</p>
         <p>
           This Privacy Policy describes Our policies and procedures on the
@@ -58,11 +60,7 @@
           the Service, You agree to the collection and use of information in
           accordance with this Privacy Policy. This Privacy Policy has been
           created with the help of the
-          <a
-            href="https://www.termsfeed.com/privacy-policy-generator/"
-            target="_blank"
-            >Privacy Policy Generator</a
-          >.
+          <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.
         </p>
         <h2 class="title">Interpretation and Definitions</h2>
         <h3>Interpretation</h3>
@@ -137,12 +135,7 @@
             <p>
               <strong>Website</strong> refers to Spotting the Light, accessible
               from
-              <a
-                href="www.spottingthelight.com"
-                rel="external nofollow noopener"
-                target="_blank"
-                >www.spottingthelight.com</a
-              >
+              <a href="www.spottingthelight.com" rel="external nofollow noopener" target="_blank">www.spottingthelight.com</a>
             </p>
           </li>
           <li>
@@ -220,12 +213,7 @@
             used for Browser Cookies. For more information on how You can delete
             Flash Cookies, please read &quot;Where can I change the settings for
             disabling, or deleting local shared objects?&quot; available at
-            <a
-              href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-              rel="external nofollow noopener"
-              target="_blank"
-              >https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a
-            >
+            <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.php#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_" rel="external nofollow noopener" target="_blank">https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.php#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_</a>
           </li>
           <li>
             <strong>Web Beacons.</strong> Certain sections of our Service and
@@ -242,9 +230,7 @@
           Persistent Cookies remain on Your personal computer or mobile device
           when You go offline, while Session Cookies are deleted as soon as You
           close Your web browser. You can learn more about cookies here:
-          <a href="https://www.termsfeed.com/blog/cookies/" target="_blank"
-            >All About Cookies by TermsFeed</a
-          >.
+          <a href="https://www.termsfeed.com/blog/cookies/" target="_blank">All About Cookies by TermsFeed</a>.
         </p>
         <p>
           We use both Session and Persistent Cookies for the purposes set out
@@ -527,52 +513,53 @@
         <ul>
           <li>By email: info@spottingthelight.com</li>
         </ul>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer section end -->
-    <footer>
-      <div class="sectionWrapper">
-        <div class="pages">
-          <p class="title">Pages</p>
-          <div class="contentPages">
-            <a href="/#home">Home</a>
-            <a href="/#services">Our services</a>
-            <a href="/#testimonies">Testimonies</a>
-            <a href="/contact.html">Contact</a>
-          </div>
-        </div>
-        <div class="socialMedia">
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
-          <a href="#"><i class="fab fa-instagram-square"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-        <div class="extraPages">
-          <a href="/terms_conditions.html">Terms of Service</a>
-          <a href="/privacy_policy.html">Privacy policy</a>
-        </div>
-        <div class="contactInformation">
-          <p class="title">Contact information</p>
-
-          <div class="infoItem">
-            <p class="type">Email</p>
-            <p>info@spottingthelight.com</p>
-          </div>
-          <div class="infoItem">
-            <p class="type">Phone</p>
-            <p>(934)-234-2342</p>
-          </div>
-          <div class="infoItem">
-            <p class="type">Address</p>
-            <p>Av Saint Park 342</p>
-            <p>City Ground</p>
-            <p>Arkansas</p>
-          </div>
+  <!-- Footer section end -->
+  <footer>
+    <div class="sectionWrapper">
+      <div class="pages">
+        <p class="title">Pages</p>
+        <div class="contentPages">
+          <a href="./#home">Home</a>
+          <a href="./#services">Our services</a>
+          <a href="./#testimonies">Testimonies</a>
+          <a href="./contact.php">Contact</a>
         </div>
       </div>
-    </footer>
-    <!-- Footer section end -->
-    <script src="/js/app.js"></script>
-  </body>
+      <div class="socialMedia">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="extraPages">
+        <a href="./terms_conditions.php">Terms of Service</a>
+        <a href="./privacy_policy.php">Privacy policy</a>
+      </div>
+      <div class="contactInformation">
+        <p class="title">Contact information</p>
+
+        <div class="infoItem">
+          <p class="type">Email</p>
+          <p>info@spottingthelight.com</p>
+        </div>
+        <div class="infoItem">
+          <p class="type">Phone</p>
+          <p>(934)-234-2342</p>
+        </div>
+        <div class="infoItem">
+          <p class="type">Address</p>
+          <p>Av Saint Park 342</p>
+          <p>City Ground</p>
+          <p>Arkansas</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer section end -->
+  <script src="./js/app.js"></script>
+</body>
+
 </html>
