@@ -1,3 +1,52 @@
+<?php 
+  // Message vars
+  $msg = "";
+  $msgClass = "";
+ 
+ if(filter_has_var(INPUT_POST, "submit")) {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $message = htmlspecialchars($_POST["message"]);
+
+
+    if(!empty($name) && !empty($email) && !empty($message)) {
+      
+      if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+        $msg = "Please use a valid email";
+        $msgClass = "error";
+      } else {
+        $toEmail = "julio@fbangel.com";
+        $subject = "Contact request From ".$name;
+        $body = "
+          <h2>Contact request</h2>
+          <h4>Name</h4><p>".$name."</p>
+          <h4>Name</h4><p>".$email."</p>
+          <h4>Name</h4><p>".$message."</p>
+        ";
+
+        // Email headers
+        $headers = "MIME-Version: 1.0" ."\r\n";
+        $headers .= "Content-Type:text/html;charset=UTF-8" ."\r\r";
+
+        // Aditional headers
+        $headers .= "From " .$name. "<".$email.">". "\r\n";
+
+        if(mail($toEmail, $subject, $body, $headers)) {
+          $msg = "Your email has been sent";
+          $mesgClass = "success";
+
+        } else {
+          $msg = "Your email was not sent";
+          $msgClass = "error";
+        }
+      }
+    } else {
+      $msg = "Please fill in all fields";
+      $msgClass = "error";
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -186,15 +235,19 @@
             hear from you and collaborate with you
           </p>
         </div>
-        <form action="" onsubmit="return handleSubmit(event)">
+        <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>">
           <div class="formItem">
             <label for="name">Your name</label>
             <input
               type="text"
               name="name"
-              required
               placeholder="What's you name?"
+              value="<?php echo isset($_POST["name"]) ? $name : "" ?>"
+
             />
+            
+
+            
           </div>
           <div class="formItem">
             <label for="email">Your email</label>
@@ -203,7 +256,12 @@
               name="email"
               required
               placeholder="What's your email?"
+              value="<?php echo isset($_POST["email"]) ? $email : "" ?>"
+
             />
+            
+
+            
           </div>
           <div class="formItem">
             <label for="message">Your message</label>
@@ -211,13 +269,16 @@
               name="message"
               required
               placeholder="How can we help you?"
-            ></textarea>
+            ><?php echo isset($_POST["message"]) ? $message : "" ?></textarea>
           </div>
-          <div class="submitMessage">
-            <p class="errors"></p>
-            <p class="success"></p>
-          </div>
-          <button type="submit">Send</button>
+          <?php if($msg != ""): ?>
+            <div class="submitMessage">
+              <p class="<?php echo $msgClass; ?>">
+                <?php echo $msg; ?>  
+              </p>
+            </div>
+          <?php endif; ?>
+          <button type="submit" name="submit">Send</button>
         </form>
       </div>
     </section>
@@ -266,6 +327,9 @@
       </div>
     </footer>
     <!-- Footer section end -->
+
+
+
 
     <!-- Jquery -->
     <script
